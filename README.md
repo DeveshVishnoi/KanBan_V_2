@@ -12,6 +12,7 @@ This project is an implementation of a Kanban Board created in Vuejs.
 
 - Simply run `npm install` , it will initiate the node app in development for create `node modules` file
 - then run `npm run dev` then your link will be generated
+- for api simply run `main.py` file using command in termina is `python main.py`
 
 
 
