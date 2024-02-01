@@ -4,13 +4,16 @@ from application.database import db
 from flask_cors import CORS
 from application.worker import *
 import redis
+import os
 
+basedir = os.path.abspath(os.path.dirname(__file__))
 
  
 def create_app():
     app = Flask(__name__)
     CORS(app)
-    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///kanaban.sqlite3"
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'kanaban.sqlite3')
+
     app.config["DEBUG"] = False
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
     app.secret_key = "deveshisgreat"
