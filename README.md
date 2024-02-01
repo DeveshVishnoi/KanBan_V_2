@@ -5,7 +5,7 @@
 This project is an implementation of a Kanban Board created in Vuejs.
 
 ## Screenshots  
-![Alternative text for the image](https://github.com/DeveshVishnoi/Kanban_V_2/blob/main/static/image/plot_1.png)
+![KanBan App Dashboad Page](https://github.com/DeveshVishnoi/Kanban_V_2/blob/main/static/Screenshot%202024-01-31%20222552.png, "Dashboad Page")
 
 ## Recommended IDE Setup
 
