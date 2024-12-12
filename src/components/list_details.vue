@@ -155,7 +155,7 @@ export default {
   },
    mounted() {
         // fetch("")
-        fetch(`https://kanban-v-2.onrender.com/api/${this.user_id}/${this.list_id}` , {
+        fetch(`https://kanban-v-2-mb2w.onrender.com/api/${this.user_id}/${this.list_id}` , {
             method: "GET",
             headers:{"Content-Type": "application/json",
             "x-access-token": localStorage.getItem("token")
@@ -172,7 +172,7 @@ export default {
     updatelist() {
       console.log(this.list_id); 
       console.log(this.user_id); 
-      fetch("https://kanban-v-2.onrender.com/api/" + this.user_id + "/" + this.list_id ,{
+      fetch("https://kanban-v-2-mb2w.onrender.com/api/" + this.user_id + "/" + this.list_id ,{
         method:"PUT",
         headers:{"Content-Type":"application/json",
         "x-access-token": localStorage.getItem("token")

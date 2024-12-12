@@ -75,7 +75,7 @@ export default {
   },
   mounted() {
     this.get_user_details(),
-    fetch("https://kanban-v-2.onrender.com/api/" +"summary/"+ this.user_id, {
+    fetch("https://kanban-v-2-mb2w.onrender.com/api/" +"summary/"+ this.user_id, {
         method: "GET",
         headers: { "x-access-token": localStorage.getItem("token") },
       }).
@@ -103,7 +103,7 @@ export default {
         this.$router.replace({ name: 'login' });
     },
     get_user_details() {
-      let result = fetch("https://kanban-v-2.onrender.com/api/" + this.user_id, {
+      let result = fetch("https://kanban-v-2-mb2w.onrender.com/api/" + this.user_id, {
         method: "GET",
         headers: { "x-access-token": localStorage.getItem("token") },
       }
@@ -120,7 +120,7 @@ export default {
         }).catch(err=>this.$router.push({ name: "login" }));
     },
     export_list() {
-      fetch("https://kanban-v-2.onrender.com/api/export/" + this.user_id, {
+      fetch("https://kanban-v-2-mb2w.onrender.com/api/export/" + this.user_id, {
         method: "GET",
         headers: { "x-access-token": localStorage.getItem("token") },
       })

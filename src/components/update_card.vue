@@ -101,7 +101,7 @@ export default {
   },
   methods: {
     get_user_details() {
-      let result = fetch("https://kanban-v-2.onrender.com/api/" + this.user_id, {
+      let result = fetch("https://kanban-v-2-mb2w.onrender.com/api/" + this.user_id, {
         method: "GET",
         headers: { "x-access-token": localStorage.getItem("token") },
       }
@@ -124,7 +124,7 @@ export default {
     updatecard() {
       
 
-      fetch("https://kanban-v-2.onrender.com/api/" + this.user_id + "/" + this.list_id + "/" + this.card_id, {
+      fetch("https://kanban-v-2-mb2w.onrender.com/api/" + this.user_id + "/" + this.list_id + "/" + this.card_id, {
         method: "PUT",
         headers: { "Content-Type": "application/json" ,"x-access-token": localStorage.getItem("token")},
         body: JSON.stringify({
@@ -159,7 +159,7 @@ export default {
   mounted() {
     this.get_user_details();
     fetch(
-    `https://kanban-v-2.onrender.com/api/${this.user_id}/${this.list_id}/${this.card_id}`,
+    `https://kanban-v-2-mb2w.onrender.com/api/${this.user_id}/${this.list_id}/${this.card_id}`,
     {
         method: "GET",
         headers: { "Content-Type": "application/json","x-access-token": localStorage.getItem("token")},

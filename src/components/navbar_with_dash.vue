@@ -41,7 +41,7 @@
         this.$router.replace({ name: "login" });
       },
       get_user_details(){
-        fetch("https://kanban-v-2.onrender.com/api/" + this.user_id,{
+        fetch("https://kanban-v-2-mb2w.onrender.com/api/" + this.user_id,{
           method: "GET",
           headers: {'x-access-token':localStorage.getItem("token")}
         })
@@ -65,7 +65,7 @@
         this.$router.push({ name: "User_details" });
       },
       export_list() {
-      fetch("https://kanban-v-2.onrender.com/api/export/" + this.user_id, {
+      fetch("https://kanban-v-2-mb2w.onrender.com/api/export/" + this.user_id, {
         method: "GET",
         headers: { "x-access-token": localStorage.getItem("token") },
       })
