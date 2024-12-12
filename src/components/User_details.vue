@@ -358,7 +358,7 @@ export default {
 
     },
     get_user_details() {
-      fetch("http://127.0.0.1:5000/api/" + this.user_id, {
+      fetch("https://kanban-v-2.onrender.com/api/" + this.user_id, {
         method: "GET",
         headers: { "x-access-token": localStorage.getItem("token") },
       })
@@ -380,7 +380,7 @@ export default {
     },
 
     addlist() {
-      fetch("http://127.0.0.1:5000/api/list/" + this.user_id, {
+      fetch("https://kanban-v-2.onrender.com/api/list/" + this.user_id, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -406,7 +406,7 @@ export default {
         .catch((err) => this.$router.push({ name: "login" }));
     },
     delete_list(id) {
-      fetch(`http://127.0.0.1:5000/api/${this.user_id}/${id}`, {
+      fetch(`https://kanban-v-2.onrender.com/api/${this.user_id}/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -432,7 +432,7 @@ export default {
       console.log(id, idd);
       id = localStorage.getItem("card_id");
       idd = localStorage.getItem("task_id");
-      fetch(`http://127.0.0.1:5000/api/${this.user_id}/${idd}/${id}`, {
+      fetch(`https://kanban-v-2.onrender.com/api/${this.user_id}/${idd}/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -455,7 +455,7 @@ export default {
         .catch((err) => this.$router.push({ name: "login" }));
     },
     export_card(l) {
-      fetch("http://127.0.0.1:5000/api/export/" + this.user_id + "/"+l, {
+      fetch("https://kanban-v-2.onrender.com/api/export/" + this.user_id + "/"+l, {
         method: "GET",
         headers: { "x-access-token": localStorage.getItem("token") },
       })

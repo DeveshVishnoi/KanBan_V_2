@@ -49,7 +49,7 @@ export default {
       this.$router.replace({ name: "login" });
     },
     get_user_details() {
-      fetch("http://127.0.0.1:5000/api/" + this.user_id, {
+      fetch("https://kanban-v-2.onrender.com/api/" + this.user_id, {
         method: "GET",
         headers: { "x-access-token": localStorage.getItem("token") },
       })
@@ -66,7 +66,7 @@ export default {
         });
     },
     export_list() {
-      fetch("http://127.0.0.1:5000/api/export/" + this.user_id, {
+      fetch("https://kanban-v-2.onrender.com/api/export/" + this.user_id, {
         method: "GET",
         headers: { "x-access-token": localStorage.getItem("token") },
       })

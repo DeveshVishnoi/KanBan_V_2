@@ -96,7 +96,7 @@ export default {
   mounted() {
     // fetch("")
     this.get_user_details();
-    fetch(`http://127.0.0.1:5000/api/${this.user_id}/${this.list_id}`, {
+    fetch(`https://kanban-v-2.onrender.com/api/${this.user_id}/${this.list_id}`, {
       method: "GET",
       headers: { "Content-Type": "application/json",
       "x-access-token": localStorage.getItem("token") },
@@ -118,7 +118,7 @@ export default {
   // },
   methods: {
     addcard() {
-      fetch(`http://127.0.0.1:5000/api/card/${this.user_id}/${this.list_id}`, {
+      fetch(`https://kanban-v-2.onrender.com/api/card/${this.user_id}/${this.list_id}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -144,7 +144,7 @@ export default {
         }).catch(err=>this.$router.push({ name: "login" }));
     },
     get_user_details() {
-      let result = fetch("http://127.0.0.1:5000/api/" + this.user_id, {
+      let result = fetch("https://kanban-v-2.onrender.com/api/" + this.user_id, {
         method: "GET",
         headers: { "x-access-token": localStorage.getItem("token") },
       })

@@ -92,7 +92,7 @@ export default {
         // this.$router.push({ name: "login" });
         alert("bhai sari information toh de");
       } else {
-        fetch("http://127.0.0.1:5000/api/Login", {
+        fetch("https://kanban-v-2.onrender.com/api/Login", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -120,7 +120,7 @@ export default {
     },
     signup() {
       if (this.username != "" && this.email_id != "" && this.password != "") {
-        fetch("http://127.0.0.1:5000/api/Register", {
+        fetch("https://kanban-v-2.onrender.com/api/Register", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
