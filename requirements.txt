@@ -31,7 +31,6 @@ httplib2
 Jinja2
 JsonForm
 jsonschema
-jwt
 marshmallow
 marshmallow-sqlalchemy==0.28.1
 matplotlib
@@ -39,8 +38,7 @@ matplotlib-inline
 matplotlip
 numpy
 pandas
-PyJWT==2.1.0
-python-jwt
+PyJWT
 redis
 flash
 Flask
